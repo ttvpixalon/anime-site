@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniStream - Watch Naruto Episode 1</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Linking the new CSS files -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/watch.css">
+
+    <!-- Fonts and JavaScript -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -33,10 +38,59 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="video-description">
+            <div class="video-details">
                 <h1>Watch Naruto - Episode 1: Enter Naruto Uzumaki!</h1>
+                <div class="video-actions">
+                    <button class="like-button">👍 Like</button>
+                    <button class="dislike-button">👎 Dislike</button>
+                    <span class="rating">8.5/10</span>
+                </div>
                 <p>Join Naruto Uzumaki in his very first adventure, where we get to know the determination of a young ninja dreaming of becoming the Hokage.</p>
                 <a href="anime-details.html?id=1" class="btn-primary">Back to Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Episodes Section -->
+    <section class="related-episodes-section">
+        <div class="container">
+            <h2>Related Episodes</h2>
+            <div class="related-grid">
+                <div class="related-item">
+                    <img src="images/naruto-ep2.jpg" alt="Naruto Episode 2">
+                    <div class="related-info">
+                        <h3>Episode 2: My Name is Konohamaru!</h3>
+                        <a href="watch.html?id=2" class="btn-watch">Watch Now</a>
+                    </div>
+                </div>
+                <div class="related-item">
+                    <img src="images/naruto-ep3.jpg" alt="Naruto Episode 3">
+                    <div class="related-info">
+                        <h3>Episode 3: Sasuke and Sakura: Friends or Foes?</h3>
+                        <a href="watch.html?id=3" class="btn-watch">Watch Now</a>
+                    </div>
+                </div>
+                <!-- More related episodes can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <h2>Comments</h2>
+            <div class="comment-box">
+                <input type="text" class="comment-input" placeholder="Add a comment...">
+                <button class="comment-button">Post Comment</button>
+            </div>
+            <div class="comments-list">
+                <div class="comment-item">
+                    <strong>User1:</strong> Amazing episode, Naruto is so inspiring!
+                </div>
+                <div class="comment-item">
+                    <strong>User2:</strong> Can't wait to see what happens next!
+                </div>
+                <!-- More comments can be dynamically added here -->
             </div>
         </div>
     </section>
@@ -44,10 +98,12 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
-            <p>&copy; 2024 AniStream. All rights reserved. | Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a></p>
+            <p>&copy; 2024 AniStream. All rights reserved. | Follow us on 
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook" class="social-icon"></a>
+            </p>
         </div>
     </footer>
 
 </body>
 </html>
-
