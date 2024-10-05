@@ -3,18 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniStream - Anime Details</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>AniStream - Naruto Details</title>
+    <!-- Linking new CSS files -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/anime-details.css">
+
+    <!-- Fonts and JavaScript -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Anime Details</h1>
-    </header>
-    <div class="anime-details">
-        <img src="images/naruto.jpg" alt="Naruto" class="anime-image">
-        <h2>Naruto</h2>
-        <p>Naruto Uzumaki is a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the strongest ninja in the village.</p>
-        <a href="watch.html?id=1" class="watch-link">Watch Episode 1</a>
-    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">AniStream</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#recently-added">Recently Added</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <section class="anime-hero">
+        <div class="hero-background" style="background-image: url('../images/naruto-bg.jpg');">
+            <div class="overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="anime-title">Naruto</h1>
+                    <div class="anime-meta">
+                        <span class="rating">Rating: 8.5/10</span>
+                        <span class="genre">Genres: Action, Adventure, Fantasy</span>
+                    </div>
+                    <p class="anime-description">Naruto Uzumaki is a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the strongest ninja in the village.</p>
+                    <button class="btn-favorite">❤️ Add to Favorites</button>
+                </div>
+                <img src="images/naruto.jpg" alt="Naruto" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section (Synopsis and Episodes) -->
+    <section class="tabs-section">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="synopsis">Synopsis</button>
+                <button class="tab-button" data-tab="episodes">Episodes</button>
+            </div>
+            <div class="tab-content" id="synopsis" style="display: block;">
+                <p>Naruto Uzumaki embarks on thrilling adventures filled with action and friendship. His journey is filled with trials that push him towards his dream of becoming the Hokage, making friends and enemies along the way.</p>
+            </div>
+            <div class="tab-content" id="episodes">
+                <ul class="episode-list">
+                    <li><a href="watch.html?id=1">Episode 1: Enter Naruto Uzumaki!</a></li>
+                    <li><a href="watch.html?id=2">Episode 2: My Name is Konohamaru!</a></li>
+                    <li><a href="watch.html?id=3">Episode 3: Sasuke and Sakura: Friends or Foes?</a></li>
+                    <!-- Add more episodes here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Characters Section -->
+    <section class="characters-section">
+        <div class="container">
+            <h2>Key Characters</h2>
+            <div class="characters-grid">
+                <div class="character-item">
+                    <img src="images/naruto.jpg" alt="Naruto Uzumaki">
+                    <div class="character-info">
+                        <h3>Naruto Uzumaki</h3>
+                        <p>Dreams of becoming the Hokage, a strong and resilient ninja full of determination.</p>
+                    </div>
+                </div>
+                <div class="character-item">
+                    <img src="images/sasuke.jpg" alt="Sasuke Uchiha">
+                    <div class="character-info">
+                        <h3>Sasuke Uchiha</h3>
+                        <p>A talented but brooding ninja from the Uchiha clan, seeking to restore his clan’s honor.</p>
+                    </div>
+                </div>
+                <!-- Add more characters here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2>User Reviews</h2>
+            <div class="review-box">
+                <input type="text" class="review-input" placeholder="Write a review...">
+                <button class="review-button">Post Review</button>
+            </div>
+            <div class="reviews-list">
+                <div class="review-item">
+                    <strong>User1:</strong> Absolutely love Naruto’s energy! He is an inspiration to everyone.
+                </div>
+                <div class="review-item">
+                    <strong>User2:</strong> This episode was full of great action scenes and meaningful character moments.
+                </div>
+                <!-- More reviews can be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 AniStream. All rights reserved. | Follow us on 
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook" class="social-icon"></a>
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
