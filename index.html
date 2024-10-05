@@ -5,22 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniStream - Homepage</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to AniStream</h1>
-    </header>
-    <div class="anime-list">
-        <div class="anime-item">
-            <img src="images/naruto.jpg" alt="Naruto" class="anime-image">
-            <h3>Naruto</h3>
-            <a href="anime-details.html?id=1" class="details-link">View Details</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">AniStream</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#recent">Recently Added</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Stream Your Favorite Anime</h1>
+        <p>Watch thousands of episodes for free.</p>
+    </section>
+
+    <!-- Anime List Section -->
+    <section class="anime-list">
+        <h2>Available Anime</h2>
+        <div class="anime-grid">
+            <div class="anime-item">
+                <img src="images/naruto.jpg" alt="Naruto" class="anime-image">
+                <div class="anime-info">
+                    <h3>Naruto</h3>
+                    <p>Genre: Action, Adventure</p>
+                    <p>Rating: 8.5/10</p>
+                    <a href="anime-details.html?id=1" class="details-link">View Details</a>
+                </div>
+            </div>
+            <div class="anime-item">
+                <img src="images/onepiece.jpg" alt="One Piece" class="anime-image">
+                <div class="anime-info">
+                    <h3>One Piece</h3>
+                    <p>Genre: Action, Fantasy</p>
+                    <p>Rating: 9.0/10</p>
+                    <a href="anime-details.html?id=2" class="details-link">View Details</a>
+                </div>
+            </div>
+            <!-- Add more anime items here -->
         </div>
-        <div class="anime-item">
-            <img src="images/onepiece.jpg" alt="One Piece" class="anime-image">
-            <h3>One Piece</h3>
-            <a href="anime-details.html?id=2" class="details-link">View Details</a>
-        </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2024 AniStream. All rights reserved.</p>
+    </footer>
 </body>
 </html>
