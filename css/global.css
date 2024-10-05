@@ -1,0 +1,96 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body and Container */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 70px; /* Prevent content from overlapping with the navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1c1c1c;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #ff6347;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: color 0.3s, background 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    background: #1c1c1c;
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 3px solid #ff6347;
+}
+
+/* Custom Scrollbar for Body */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ff6347;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #333;
+}
