@@ -3,31 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniStream - Homepage</title>
+    <title>AniStream - Watch Anime Online</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="js/scripts.js"></script>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">AniStream</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#trending">Trending</a></li>
-            <li><a href="#recent">Recently Added</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <div class="logo">AniStream</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#recently-added">Recently Added</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Stream Your Favorite Anime</h1>
-        <p>Watch thousands of episodes for free.</p>
+        <div class="hero-content">
+            <h1>Watch Your Favorite Anime Anytime</h1>
+            <p>Stream thousands of episodes in HD for free.</p>
+            <a href="#trending" class="btn-primary">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Trending Anime Carousel -->
+    <section id="trending" class="trending-section">
+        <h2>Trending Now</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="images/naruto.jpg" alt="Naruto">
+                <div class="carousel-info">
+                    <h3>Naruto</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/onepiece.jpg" alt="One Piece">
+                <div class="carousel-info">
+                    <h3>One Piece</h3>
+                </div>
+            </div>
+            <!-- More carousel items can be added here -->
+        </div>
     </section>
 
     <!-- Anime List Section -->
-    <section class="anime-list">
-        <h2>Available Anime</h2>
+    <section id="recently-added" class="anime-list">
+        <h2>Recently Added Anime</h2>
         <div class="anime-grid">
             <div class="anime-item">
                 <img src="images/naruto.jpg" alt="Naruto" class="anime-image">
@@ -53,7 +82,9 @@
 
     <!-- Footer -->
     <footer id="contact">
-        <p>&copy; 2024 AniStream. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 AniStream. All rights reserved. | Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a></p>
+        </div>
     </footer>
 </body>
 </html>
