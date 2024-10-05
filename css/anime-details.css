@@ -1,6 +1,9 @@
 /* General Body Padding to Avoid Navbar Overlap */
 body {
     padding-top: 80px; /* Adjust according to the height of the navbar */
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Consistent dark theme across the site */
+    color: #e0e0e0;
 }
 
 /* Hero Banner Section */
@@ -19,6 +22,12 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+    animation: fadeInHero 1.5s ease-in-out;
+}
+
+@keyframes fadeInHero {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .overlay {
@@ -40,6 +49,12 @@ body {
 
 .hero-text {
     max-width: 500px;
+    animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-50%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 .anime-title {
@@ -67,11 +82,12 @@ body {
     color: #fff;
     border-radius: 20px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn-favorite:hover {
     background: #ff4500;
+    transform: translateY(-3px);
 }
 
 .share-buttons {
@@ -85,11 +101,12 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn-share:hover {
     background: #344e86;
+    transform: translateY(-3px);
 }
 
 .hero-image {
@@ -109,6 +126,7 @@ body {
     gap: 20px;
     justify-content: center;
     margin-bottom: 30px;
+    border-bottom: 2px solid #444;
 }
 
 .tab-button {
@@ -117,12 +135,13 @@ body {
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: 5px 5px 0 0;
+    transition: background 0.3s, color 0.3s;
 }
 
 .tab-button.active {
     background: #ff6347;
+    color: #fff;
 }
 
 .tab-button:hover {
@@ -134,6 +153,11 @@ body {
     color: #ccc;
 }
 
+.tab-content.active {
+    display: block;
+}
+
+/* Episodes Section */
 .episodes-container {
     padding: 20px;
     display: flex;
@@ -143,8 +167,8 @@ body {
 
 .episode-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -155,14 +179,20 @@ body {
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
 .episode-item:hover {
     background: #ff6347;
     transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Pagination Controls */
 .pagination-controls {
     display: flex;
     justify-content: center;
@@ -195,6 +225,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .characters-grid {
@@ -207,11 +238,12 @@ body {
     background: #333;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .character-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .character-item img {
@@ -236,6 +268,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .related-anime-grid {
@@ -248,11 +281,12 @@ body {
     background: #333;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .related-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 .related-item img {
@@ -275,9 +309,63 @@ body {
     background: #ff6347;
     border-radius: 10px;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn-details:hover {
+    background: #ff4500;
+    transform: translateY(-3px);
+}
+
+/* Reviews Section */
+.reviews-list {
+    margin-top: 20px;
+    padding: 0 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.review-item {
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.review-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.review-box {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto 0;
+}
+
+.review-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.review-button {
+    padding: 10px 20px;
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.review-button:hover {
     background: #ff4500;
 }
