@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="js/scripts.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 
@@ -42,29 +42,45 @@
                     </div>
                     <p class="anime-description">Naruto Uzumaki is a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the strongest ninja in the village.</p>
                     <button class="btn-favorite">❤️ Add to Favorites</button>
+                    <div class="share-buttons">
+                        <button class="btn-share" onclick="shareAnime('Naruto')">📤 Share on Social Media</button>
+                    </div>
                 </div>
                 <img src="images/naruto.jpg" alt="Naruto" class="hero-image">
             </div>
         </div>
     </section>
 
-    <!-- Tabs Section (Synopsis and Episodes) -->
+    <!-- Tabs Section (Synopsis, Episodes, Reviews) -->
     <section class="tabs-section">
         <div class="container">
             <div class="tabs">
                 <button class="tab-button active" data-tab="synopsis">Synopsis</button>
                 <button class="tab-button" data-tab="episodes">Episodes</button>
+                <button class="tab-button" data-tab="reviews">Reviews</button>
             </div>
             <div class="tab-content" id="synopsis" style="display: block;">
                 <p>Naruto Uzumaki embarks on thrilling adventures filled with action and friendship. His journey is filled with trials that push him towards his dream of becoming the Hokage, making friends and enemies along the way.</p>
             </div>
             <div class="tab-content" id="episodes">
-                <ul class="episode-list">
-                    <li><a href="watch.html?id=1">Episode 1: Enter Naruto Uzumaki!</a></li>
-                    <li><a href="watch.html?id=2">Episode 2: My Name is Konohamaru!</a></li>
-                    <li><a href="watch.html?id=3">Episode 3: Sasuke and Sakura: Friends or Foes?</a></li>
-                    <!-- Add more episodes here -->
-                </ul>
+                <div class="episodes-container">
+                    <div id="episode-pagination" class="pagination-controls"></div>
+                    <div id="episode-list" class="episode-list"></div>
+                </div>
+            </div>
+            <div class="tab-content" id="reviews">
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <strong>User1:</strong> Absolutely love Naruto’s energy! He is an inspiration to everyone.
+                    </div>
+                    <div class="review-item">
+                        <strong>User2:</strong> This episode was full of great action scenes and meaningful character moments.
+                    </div>
+                </div>
+                <div class="review-box">
+                    <input type="text" class="review-input" placeholder="Write a review...">
+                    <button class="review-button">Post Review</button>
+                </div>
             </div>
         </div>
     </section>
@@ -88,27 +104,31 @@
                         <p>A talented but brooding ninja from the Uchiha clan, seeking to restore his clan’s honor.</p>
                     </div>
                 </div>
-                <!-- Add more characters here -->
+                <!-- More characters can be added here -->
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews-section">
+    <!-- Related Anime Section -->
+    <section class="related-anime-section">
         <div class="container">
-            <h2>User Reviews</h2>
-            <div class="review-box">
-                <input type="text" class="review-input" placeholder="Write a review...">
-                <button class="review-button">Post Review</button>
-            </div>
-            <div class="reviews-list">
-                <div class="review-item">
-                    <strong>User1:</strong> Absolutely love Naruto’s energy! He is an inspiration to everyone.
+            <h2>Related Anime</h2>
+            <div class="related-anime-grid">
+                <div class="related-item">
+                    <img src="images/onepiece.jpg" alt="One Piece">
+                    <div class="related-info">
+                        <h3>One Piece</h3>
+                        <a href="anime-details.html?id=2" class="btn-details">View Details</a>
+                    </div>
                 </div>
-                <div class="review-item">
-                    <strong>User2:</strong> This episode was full of great action scenes and meaningful character moments.
+                <div class="related-item">
+                    <img src="images/bleach.jpg" alt="Bleach">
+                    <div class="related-info">
+                        <h3>Bleach</h3>
+                        <a href="anime-details.html?id=3" class="btn-details">View Details</a>
+                    </div>
                 </div>
-                <!-- More reviews can be dynamically added here -->
+                <!-- More related anime can be added here -->
             </div>
         </div>
     </section>
