@@ -3,18 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniStream - Watch Anime</title>
+    <title>AniStream - Watch Naruto Episode 1</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Watch Naruto - Episode 1</h1>
-    </header>
-    <div class="video-container">
-        <video controls class="anime-video">
-            <source src="videos/naruto-episode1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">AniStream</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#recently-added">Recently Added</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Watch Video Section -->
+    <section class="watch-section">
+        <div class="container">
+            <div class="video-container">
+                <video controls class="anime-video" poster="../images/naruto-poster.jpg">
+                    <source src="../videos/naruto-episode1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-description">
+                <h1>Watch Naruto - Episode 1: Enter Naruto Uzumaki!</h1>
+                <p>Join Naruto Uzumaki in his very first adventure, where we get to know the determination of a young ninja dreaming of becoming the Hokage.</p>
+                <a href="anime-details.html?id=1" class="btn-primary">Back to Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 AniStream. All rights reserved. | Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
